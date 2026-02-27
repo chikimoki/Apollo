@@ -76,7 +76,8 @@ namespace ApolloInterop.Classes
                 Array.Copy(sleepers, 0, tmp, handles.Length, sleepers.Length);
                 sleepers = tmp;
             }
-            WaitHandle.WaitAny(sleepers, sleepTime);
+            //WaitHandle.WaitAny(sleepers, sleepTime);
+            Thread.Sleep(SleepInterval);
         }
 
         public void AcquireOutputLock()
@@ -113,3 +114,4 @@ namespace ApolloInterop.Classes
 
     }
 }
+
